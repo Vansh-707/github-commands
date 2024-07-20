@@ -1,4 +1,5 @@
 // to list all the files in the current repository or folder on which git bash is run :- 
+.git folder :- it contains all the changes, comments, version of the files in the repository . 
 
 $ ls -la
 total 6
@@ -8,5 +9,43 @@ drwxr-xr-x 1 Dell 197121  0 Jul 20 21:27 .git/
 -rw-r--r-- 1 Dell 197121 29 Jul 20 21:23 file1.txt
 -rw-r--r-- 1 Dell 197121 45 Jul 20 21:24 file2.txt
 
+// create the folder in which you want to place the cloned repository, right click on it and ru git bash on it . 
 
-.git folder :- it contains all the changes, comments, version of the files in the repository . 
+// type - 1 :- 
+
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+$ git clone git@github.com:Vansh-707/Java-JDBC.git // to clone repo :- place the SSH url of the repo you want to clone in the command .   
+
+Cloning into 'Java-JDBC'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+Receiving objects: 100% (7/7), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+
+$ git status
+fatal: not a git repository (or any of the parent directories): .git // even after cloning the cloned folder is not repository itself . 
+
+// type - 2  :- 
+
+// $ git clone git@github.com:Vansh-707/Java-JDBC.git . :- place '.' if you only want contents not its folder, ie., the cloned folder will become git rpository itslef . 
+
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+$ git clone git@github.com:Vansh-707/Java-JDBC.git .
+Cloning into '.'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (7/7), done.
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean // after cloning with '.' (current working folder) the cloned folder will contain the contents the of the cloned repo not its name folder, and, will also be git repository itself . 
+
