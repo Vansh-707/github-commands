@@ -1,0 +1,23 @@
+// we need to ignore the files due to some reason, to prevent system load . 
+
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+$ touch .gitignore // touch :- it creates new blank files in current repo . 
+
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+$ ls -la
+total 6
+drwxr-xr-x 1 Dell 197121  0 Jul 20 21:57 ./
+drwxr-xr-x 1 Dell 197121  0 Jul 20 21:37 ../
+drwxr-xr-x 1 Dell 197121  0 Jul 20 21:27 .git/
+-rw-r--r-- 1 Dell 197121  0 Jul 20 21:57 .gitignore // it is created in the current working repo or folder . 
+-rw-r--r-- 1 Dell 197121 29 Jul 20 21:23 file1.txt
+-rw-r--r-- 1 Dell 197121 45 Jul 20 21:24 file2.txt
+
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+$ notepad .gitignore // to open the file .gitignore with notepad, type vim. to open file with vim, command prommpt, etc . 
+
+// after the .gitignore file opens add the file name, and, types you want to ignore . 
+
+
+
+  
