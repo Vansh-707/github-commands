@@ -1,0 +1,16 @@
+// if the branches data or files are being pushed to some other branch, then, this branch will conatain only duplicate data, so, we must remove these branches . 
+
+$ git branch
+  login-system
+* master
+  
+$ git branch -d login-system // to remove the branch from your computer . 
+Deleted branch login-system (was e77d445).
+
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+$ git branch
+* master
+
+$ git push origin --delete login-system // to remove the branch from the remote repository or git hub . 
+To https://github.com/Vansh-707/github-commands
+ - [deleted]         login-system
