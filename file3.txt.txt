@@ -1,1 +1,2 @@
 This is file3 for branch login-system . 
+This file is merged from login-system branch to master branch . 
