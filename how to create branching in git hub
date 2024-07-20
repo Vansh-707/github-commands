@@ -1,0 +1,66 @@
+// by default branch :- master . 
+
+$ git branch // to print the current branch name . 
+* master
+
+// to create new branch :- 
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+$ git branch login-system
+
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+$ git branch
+  login-system
+* master // '*' :- represent the current branch . 
+
+// to change the branch :- 
+$ git checkout login-system
+Switched to branch 'login-system'
+M       file1.txt
+M       file2.txt
+
+$ git branch
+* login-system // '*' :- represent the current branch . 
+  master
+
+// to commit all the files to the new branch :- 
+
+$ git status
+On branch login-system // current branch :- login-system, so all the files whihc were commited or staged for branch 'master' are not comitted or staged for branch 'login-system' . 
+  
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt
+        modified:   file2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        file3.txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+// add the files of staged area of the branch login-system :- 
+
+Dell@DellPC MINGW64 /d/git hub/practice (login-system)
+$ git add .
+
+// to commit the files in the staged area of branch login-system :- 
+
+$ git commit -m "added to login-system branch"
+[login-system e77d445] added to login-system branch
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+//  to push the files of branch login-system to the remote repository on git hub  :- 
+
+$ git push origin login-system
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 538 bytes | 269.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Vansh-707/github-commands
+   a068436..e77d445  login-system -> login-system
+
+// after pushing the files to the branch login-system, the files in the master branch is not changed . 
