@@ -5,7 +5,7 @@ Switched to branch 'master'
 Your branch is up to date with 'origin/master'.
 
 Dell@DellPC MINGW64 /d/git hub/practice (master)
-$ git merge login-system
+$ git merge login-system // to merge the branch login-system with the current branch ( master ) . 
 Updating 361fc2b..e77d445
 Fast-forward
  .gitignore    | 1 +
@@ -15,6 +15,8 @@ Fast-forward
  4 files changed, 7 insertions(+), 2 deletions(-)
  create mode 100644 .gitignore
  create mode 100644 file3.txt.txt
+
+// to push the files to the remote repo on the git hub :- 
 
 Dell@DellPC MINGW64 /d/git hub/practice (master)
 $ git push origin master
