@@ -1,2 +1,4 @@
 This is file 2 . 
 Which pizza do you like ? 
+
+This is the file2 of branch master . 
