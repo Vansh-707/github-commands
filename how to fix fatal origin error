@@ -1,0 +1,17 @@
+How to fix fatal: origin does not appear to be a git repository
+The fatal: ‘origin’ does not appear to be a git repository error occurs when you try to commit to a newly made git repository created using the git init command. This happens because git init does not link a local repository to a remote repository. You can check this by running:
+
+git remote -v
+If there is no remote repo called origin, you should try the following solution.
+
+
+To fix the error :- 
+
+Inform Git of the location of the remote repository by running the following command:
+
+git remote add origin <remote_URL>
+where remote_URL is the link to the repository where you want your code to be stored.
+
+Push your code by running the following command:
+
+git push origin master
