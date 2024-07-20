@@ -63,4 +63,21 @@ Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/Vansh-707/github-commands
    a068436..e77d445  login-system -> login-system
 
-// after pushing the files to the branch login-system, the files in the master branch is not changed . 
+// after pushing the files to the branch login-system, the files in the master branch is not changed . so if we move to branch master the file3.txt will not be present, and also the chages made to the other files will not be visible . 
+
+Dell@DellPC MINGW64 /d/git hub/practice (login-system)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+$ ls -la
+total 6
+drwxr-xr-x 1 Dell 197121  0 Jul 20 22:21 ./
+drwxr-xr-x 1 Dell 197121  0 Jul 20 21:37 ../
+drwxr-xr-x 1 Dell 197121  0 Jul 20 22:21 .git/
+-rw-r--r-- 1 Dell 197121 29 Jul 20 22:21 file1.txt
+-rw-r--r-- 1 Dell 197121 45 Jul 20 22:21 file2.txt // the 'file3.txt' is removed, and, changes made to the file1.txt and file2.txt are not visible . 
+
+
+
