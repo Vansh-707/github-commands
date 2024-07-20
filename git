@@ -93,27 +93,28 @@ ssh-keygen -t rsa -b 4096 -C "xyz@gmail.com" paste it on git bash cmd
  it will generate ssh key passowrd . 
 
 Dell@DellPC MINGW64 /d/Git Hub (master)
-$ ssh-keygen -t rsa -b 4096 -C "xyz@gmail.com"
+$ ssh-keygen -t rsa -b 4096 -C "bansalvansh707@gmail.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/c/Users/Dell/.ssh/id_rsa):
-Created directory '/c/Users/Dell/.ssh'.
+/c/Users/Dell/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 Your identification has been saved in /c/Users/Dell/.ssh/id_rsa
 Your public key has been saved in /c/Users/Dell/.ssh/id_rsa.pub
 The key fingerprint is:
-SHA256:ltDan1juEXKHDfLRkIC3Fe/5G8g1lCdL1EQe6Y5DU2k xyz@gmail.com
+SHA256:OOEBh27HLKcBsn5wsshfvoe6xUsyeiOVY3mMhnQoONY bansalvansh707@gmail.com
 The key's randomart image is:
 +---[RSA 4096]----+
-|       ...oo  .==|
-|      ... o+ . Eo|
-|      ..ooo o O o|
-|       +.+ * * = |
-|      . S * * B  |
-|       . B = * o |
-|        . = o +  |
-|         . .   o |
-|          .   .  |
+|    ...          |
+|. . .o           |
+|.ooo oo          |
+|=* E=.=+         |
+|B.B.=*+ S        |
+|.= Xo+ .         |
+|  *o=+.          |
+| ..+=o..         |
+| .oo+oo          |
 +----[SHA256]-----+
 
 
