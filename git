@@ -1,0 +1,140 @@
+Dell@DellPC MINGW64 /d/Git Hub
+// current working directory -> staging area ( commit ) -> git repository . 
+
+// git bash commands (similar to unix commands ) :- 
+// to check git version :- 
+
+$ git --version
+git version 2.45.2.windows.1
+
+// Right click on the folder you want to make git repository :- 
+
+// to check if the folder is git repository or not .
+
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+// to make folder a git repository :- init or initialize . it will create the invisible folder with .git extension .  
+
+$ git init 
+Initialized empty Git repository in D:/Git Hub/.git/
+
+// to change the cwd :-
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ cd
+
+Dell@DellPC MINGW64 ~
+// if we have made some changegs or created new files, then, we need to add them to the staging area before commiting it . 
+
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files: it means the files are not placed in the staging area . 
+
+  (use "git add <file>..." to include in what will be committed)
+        hello.txt.txt // it will shaow the names of the non staged files in the current repository . 
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+// to stage the files in the folder :- 
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ git add . // it will move all the remaining files from cwd to the staged area . 
+
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed: // it means that file is in staging area but changes are not commited yet . 
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt.txt
+
+// to commit the file chnages and push the file from staging area to git repository :- 
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ git commit -m "Hello. This is the place for message"
+[master (root-commit) 457da75] Hello. This is the place for message
+ 1 file changed, 3 insertions(+)
+ create mode 100644 hello.txt.txt
+
+
+// to set the user identity :- 
+
+to set your account's default identity.
+remove --global to set the identity only in this repository.
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ git config user.name "Bro"
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ git config user.email "xyz@gmail.com"
+
+// to veiw the changes record for the repository :- 
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ git log
+commit 457da751c5f05e915a5ac6a8e96a85921049056b (HEAD -> master)
+Author: Bro <xyz@gmail.com>
+Date:   Fri Jul 19 16:36:25 2024 +0530
+
+    Hello. This is the place for message
+// three stage architecture :- (work -> staging -> commit) . 
+
+user 1 <- pull <- files or version from GitHub
+user 1  -> push its own version -> GitHub
+
+// to generate SSH key :- 
+
+ssh-keygen -t rsa -b 4096 -C "xyz@gmail.com" paste it on git bash cmd 
+ it will generate ssh key passowrd . 
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ ssh-keygen -t rsa -b 4096 -C "xyz@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Dell/.ssh/id_rsa):
+Created directory '/c/Users/Dell/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Dell/.ssh/id_rsa
+Your public key has been saved in /c/Users/Dell/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:ltDan1juEXKHDfLRkIC3Fe/5G8g1lCdL1EQe6Y5DU2k xyz@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|       ...oo  .==|
+|      ... o+ . Eo|
+|      ..ooo o O o|
+|       +.+ * * = |
+|      . S * * B  |
+|       . B = * o |
+|        . = o +  |
+|         . .   o |
+|          .   .  |
++----[SHA256]-----+
+
+
+// after generating initialize the ssh agent :- 
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ eval $(ssh-agent -s)
+Agent pid 741
+
+// add the ssh key to the agent :- user = "Dell", gmail = "xyz@gmail.com"
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ ssh-add c:/Users/Dell/.ssh/id_rsa
+Identity added: c:/Users/Dell/.ssh/id_rsa (xyz@gmail.com)
+
+// to copy the ssh key to the clipboard :- 
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ clip < ~/.ssh/id_rsa.pub
+
+// to push files to the repository :- 
+
+Dell@DellPC MINGW64 /d/Git Hub (master)
+$ git push -u origin master
