@@ -41,9 +41,15 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 // to stage the files in the folder :- 
 
+$ git add -A :- stges all data . 
+$ git add . :- stages new and modified changes, which are not deleted . 
+$ git add -u :- stages modified and deleted changes, without new changes . 
+
 Dell@DellPC MINGW64 /d/Git Hub (master)
 $ git add . // it will move all the remaining files from cwd to the staged area . 
 
+
+x
 $ git status
 On branch master
 
@@ -139,3 +145,129 @@ $ clip < ~/.ssh/id_rsa.pub
 
 Dell@DellPC MINGW64 /d/Git Hub (master)
 $ git push -u origin master
+
+// if we make some changes to the file :- 
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+// to check in which lines the changes were made in the file are :- 
+
+$ git diff file2.txt
+
+diff --git a/file2.txt b/file2.txt
+index 1635abd..1b5fad3 100644
+--- a/file2.txt
++++ b/file2.txt
+@@ -1 +1,2 @@
+-This is file 2 .
+\ No newline at end of file
++This is file 2 .
++Which pizza do you like ?
+\ No newline at end of file
+
+// to check the changes in the repository :- 
+
+$ git diff
+
+diff --git a/file1.txt b/file1.txt
+index fc2b1c0..d2ff9e2 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1,2 +1,2 @@
+ Hello bro .
+-I love pizza .
+\ No newline at end of file
++I love pizza .
+diff --git a/file2.txt b/file2.txt
+index 1b5fad3..bc32eae 100644
+--- a/file2.txt
++++ b/file2.txt
+@@ -1,2 +1,2 @@
+ This is file 2 .
+-Which pizza do you like ?
+\ No newline at end of file
++Which pizza do you like ?
+
+// if we run the 'add . ' command :- no changes are visible as they are added to the staged area . 
+
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+$ git add .
+
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+$ git diff
+
+// to view the stages area changes :- 
+
+$ git diff --staged // or $ git diff --staged file1.txt
+
+diff --git a/file1.txt b/file1.txt
+index fc2b1c0..d2ff9e2 100644
+--- a/file1.txt
++++ b/file1.txt
+@@ -1,2 +1,2 @@
+ Hello bro .
+-I love pizza .
+\ No newline at end of file
++I love pizza .
+diff --git a/file2.txt b/file2.txt
+index 1b5fad3..bc32eae 100644
+--- a/file2.txt
++++ b/file2.txt
+@@ -1,2 +1,2 @@
+ This is file 2 .
+-Which pizza do you like ?
+\ No newline at end of file
++Which pizza do you like ?
+
+// to unstage the changes in the git repository :- 
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file1.txt // two files in the staged area with modifications . 
+        modified:   file2.txt
+
+$ git reset file1.txt // to unstage the changes made to the file1.txt  . 
+Unstaged changes after reset:
+M       file1.txt
+
+Dell@DellPC MINGW64 /d/git hub/practice (master)
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file2.txt // only single file is in the staged area with modifications
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.txt // unstaged file :- changes made before are tranfered from staged area to cwd . 
+
+$ git checkout file1.txt // to remove the changes from the file in the cwd . 
+Updated 1 path from the index
+
+// to remove all unstaged files from the repository :- 
+
+$ git checkout . 
+
+// to pull data from remote repository  ( git Hub ) to your device :- 
+
+$ git pull
+Already up to date.
+
+
