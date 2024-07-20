@@ -1,4 +1,5 @@
 // by default branch :- master . 
+// the branches are created in order to prevent the original branch files from being updated by creating new branch to add files . 
 
 $ git branch // to print the current branch name . 
 * master
