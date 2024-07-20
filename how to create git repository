@@ -1,0 +1,15 @@
+git status
+
+git add . 
+git status
+
+git config user.name "Vansh"
+git config user.emial"bansalvansh707@gmail.com"
+
+git commit -m "hello bro . This is the message"
+git status
+
+git log
+
+ssh-keygen -t rsa -b 4096 -C "bansalvansh707@gmail.com" // to create new ssh key value pair . 
+
