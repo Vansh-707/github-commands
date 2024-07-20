@@ -1,1 +1,12 @@
+// to list all the files in the current repository or folder on which git bash is run :- 
 
+$ ls -la
+total 6
+drwxr-xr-x 1 Dell 197121  0 Jul 20 21:24 ./
+drwxr-xr-x 1 Dell 197121  0 Jul 20 12:30 ../
+drwxr-xr-x 1 Dell 197121  0 Jul 20 21:27 .git/
+-rw-r--r-- 1 Dell 197121 29 Jul 20 21:23 file1.txt
+-rw-r--r-- 1 Dell 197121 45 Jul 20 21:24 file2.txt
+
+
+.git folder :- it contains all the changes, comments, version of the files in the repository . 
