@@ -136,6 +136,12 @@ Dell@DellPC MINGW64 /d/Git Hub (master)
 $ ssh-add c:/Users/Dell/.ssh/id_rsa
 Identity added: c:/Users/Dell/.ssh/id_rsa (xyz@gmail.com)
 
+// Add a Remote :- 
+
+In your terminal, use the following command to tell Git to connect your local repository to the one on GitHub:
+
+git remote add origin <paste-the-copied-url-here>
+
 // to copy the ssh key to the clipboard :- 
 
 Dell@DellPC MINGW64 /d/Git Hub (master)
