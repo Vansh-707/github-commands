@@ -1,20 +1,18 @@
 echo "# T20-Dream-Team" >> README.md
-git init
-git status
 
+git init
 git config user.name "Vansh"
 git config user.email"bansalvansh707@gmail.com"
 
 git add README.md
-git remote add origin git@github.com:Vansh-707/T20-Dream-Team.git
 
+git branch -M main
+git remote add origin git@github.com:Vansh-707/T20-Dream-Team.git
 git add .
 git commit -m "first commit"
 git status
 
-git branch -M main
 git push -u origin main
 
 git log
-
 ssh-keygen -t rsa -b 4096 -C "bansalvansh707@gmail.com" // to create new ssh key value pair . 
